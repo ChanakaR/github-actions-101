@@ -1,6 +1,5 @@
 
 FROM centos/systemd
-LABEL authors = "OrangeHRM TechOps <techops@orangehrm.com>"
 
 WORKDIR /var/www/html
 
