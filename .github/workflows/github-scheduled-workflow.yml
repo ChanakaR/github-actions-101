@@ -1,8 +1,8 @@
 name: OrangeHRM Database Image Scheduled Build Workflow
 
 on:
-    schedule:
-        - cron:  '* * * * *'
+    push:
+        
 env:
     REPO: ${{ github.repository }}
     BRANCH: ${GITHUB_REF##*/}
