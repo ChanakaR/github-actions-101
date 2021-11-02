@@ -19,4 +19,4 @@ jobs:
                 echo ${{env.REPO}}/.github/workflows/build-workflow.yml@${{env.BRANCH}}
 
             - name: tigger
-              uses: ${{env.REPO}}/.github/workflows/build-workflow.yml@${{env.BRANCH}}
+              uses: ChanakaR/github-actions-101/.github/workflows/github-actions-demo.yml@main
