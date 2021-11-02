@@ -1,0 +1,14 @@
+name: OrangeHRM Database Image Scheduled Build Workflow
+
+on:
+    schedule:
+      - cron:  '*/5 * * * *'
+env:
+    REPO: ${{ github.repository }}
+    BRANCH: ${GITHUB_REF##*/}
+jobs:
+    ScheduledBuild:
+        - name: check vars
+          run: |
+            echo ${{ env.REPO }}
+            echo ${{ env.BRANCH }}
