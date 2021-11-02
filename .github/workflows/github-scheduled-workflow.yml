@@ -10,13 +10,4 @@ env:
     BRANCH: ${GITHUB_REF##*/}
 jobs:
     ScheduledBuild:
-        runs-on: ubuntu-latest
-        steps:
-            - name: check vars
-              run: |
-                echo ${{ env.REPO }}
-                echo ${{ env.BRANCH }}
-                echo ${{env.REPO}}/.github/workflows/build-workflow.yml@${{env.BRANCH}}
-
-            - name: tigger
-              uses: ChanakaR/github-actions-101/.github/workflows/github-actions-demo.yml@main
+        uses: ChanakaR/github-actions-101/.github/workflows/github-actions-demo.yml@main
