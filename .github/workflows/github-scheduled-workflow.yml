@@ -8,7 +8,9 @@ env:
     BRANCH: ${GITHUB_REF##*/}
 jobs:
     ScheduledBuild:
-        - name: check vars
-          run: |
-            echo ${{ env.REPO }}
-            echo ${{ env.BRANCH }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: check vars
+              run: |
+              echo ${{ env.REPO }}
+              echo ${{ env.BRANCH }}
