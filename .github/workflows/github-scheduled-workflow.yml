@@ -5,12 +5,11 @@ on:
     schedule:
         - cron: '* * * * *'
 
-if: ${{ github.repository }} == "ChanakaR/github-actions-101"
-
 env:
     REPO: ${{ github.repository }}
     BRANCH: ${GITHUB_REF##*/}
-    
+
 jobs:
     ScheduledBuild:
+        if: ${{ github.repository }} == "ChanakaR/github-actions-101"
         uses: ChanakaR/github-actions-101/.github/workflows/github-actions-demo.yml@main
