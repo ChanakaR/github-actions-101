@@ -16,3 +16,7 @@ jobs:
               run: |
                 echo ${{ env.REPO }}
                 echo ${{ env.BRANCH }}
+                echo ${{env.REPO}}/.github/workflows/build-workflow.yml@${{env.BRANCH}}
+
+            - name: tigger
+              uses: ${{env.REPO}}/.github/workflows/build-workflow.yml@${{env.BRANCH}}
